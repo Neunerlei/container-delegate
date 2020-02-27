@@ -1,0 +1,42 @@
+{
+	"name": "neunerlei/container-delegate",
+	"description": "A delegate PSR-11 container implementation with auto-wiring, auto-caching and lazy services",
+	"type": "library",
+	"license": "Apache-2.0",
+	"authors": [
+		{
+			"name": "LABOR.digital",
+			"email": "info@labor.tools",
+			"homepage": "https://www.labor.digital",
+			"role": "Company"
+		},
+		{
+			"name": "Martin Neundorfer",
+			"email": "code@neunerlei.eu",
+			"homepage": "https://www.neunerlei.eu",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/neunerlei/container-delegate/issues",
+		"source": "https://github.com/neunerlei/container-delegate"
+	},
+	"require": {
+		"psr/container": "^1.0",
+		"php": "^7.3",
+		"neunerlei/container-autowiring-declaration": "^1.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.0",
+		"neunerlei/dbg": "^1.8",
+		"league/container": "^3.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Neunerlei\\ContainerDelegate\\": "Classes"
+		}
+	},
+	"scripts": {
+		"test": "vendor/bin/phpunit Tests"
+	}
+}
