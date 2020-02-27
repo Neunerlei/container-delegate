@@ -132,11 +132,18 @@ class A implements AInterface {
     }
 }
 
+class B {
+    public $a;
+    public function __construct(AInterface $lazyA){
+        $this->a = $lazyA;
+    }
+}
+
 $container = new Container();
-$i = $container->get(AInterface::class);
-var_dump($i instanceof AnInterface);
-var_dump($i instanceof A); // This is FALSE!
-var_dump($i->foo());
+$i = $container->get(B::class);
+var_dump($i->a instanceof AnInterface);
+var_dump($i->a instanceof A); // This is FALSE!
+var_dump($i->a->foo());
 ```
 
 ## Compiling the factories
